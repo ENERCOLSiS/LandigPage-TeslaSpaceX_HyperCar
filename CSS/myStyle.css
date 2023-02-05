@@ -1,0 +1,131 @@
+* {
+    box-sizing: border-box; /* Applied to all elements for easy sizing of elements(width) ensures that all elements are sized equally at 100% */
+}
+
+body {
+    background: url("../IMAGES/metalBackground.jpg");
+    background-size: 1120px auto;
+    border: 5px solid rgba(93, 155, 153, 0.582); /* add a 5px border  around the content */
+    border-radius: 10px; /* round the edges of the border */
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; /*This is the font that I selected for the body text content*/
+    font-size: 16px;
+    margin: 0 auto; /* auto makes the content sit horizontal centered. No space was left on top or botton */
+    padding: 20px; /* make the content inside the body sit at a 20px gap from all the 4 sides */
+    width: 1120px; /* increase the width of the body to make space for the sidebar on the left it also sets a contaider width of the page */
+}
+
+/* Style for the header */
+header {
+    background: url("../IMAGES/logoTesla.png") no-repeat left center,     url("/IMAGES/BlackMetalBackground.jpg") repeat-x; /* background and logo image are loaded here */
+    background-size: 90px, 120px 120px; /* sets the size of the logo and background images */
+    color: #C0C0C0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* This is the font select for the header*/
+    font-size: 20px;
+    padding: 20px;
+    margin-bottom: 12px; /*Space between header and nav*/
+    text-align: right; /*Sits the tagline on the right*/
+}
+
+nav{
+    background-color: #190d0d5e;
+    /* add colour to the nav background */
+    margin-bottom: 12px; /* To give 12px gap with the main content*/
+    padding: 20px 0; /* add a 20 px top and bottom padding in the nav tag  */
+    text-align: center; /* make the text in the nav centered */
+}
+
+nav a{
+    font-size: 22px; /* bigger font size for links */
+    font-weight: bold; /* make the text bold */
+    color: #c6c6c6; /* change the colour of the text links */
+    text-decoration: underline; /* sets the underline */
+    padding: 0 30px; /* push the links away from the other links */
+}
+
+main{
+    /*background-color:  #C0C0C0;*/
+    background-color: #190d0d5e; /* Background color with transparent component */
+    color: #C0C0C0; /* color for text content in main*/
+    float: right; /* push the main section to the right */
+    margin-bottom: 12px; /*Space between main and footer*/ 
+    width: 700px; /* set the width of the main section */
+}
+
+section{
+    margin: 12px; /*Separes section content from its border*/
+    text-align: justify; /*Squares the text to look more uniform*/
+}
+
+section > a{
+    color: #f45e7b; /*Color for the watch video link*/
+}
+
+img{
+    width: 100%; /* for the image to take the 100% of the section */
+}
+
+aside{
+    color: #c0c0c0;
+    float: left; /* push the sidebar to the left */
+    padding-right: 12px; /* add a 12px space on the right*/
+    width: 300px; /* set the width of the sidebar */
+}
+
+aside > h2{
+    background-color: #190d0d5e; /* Backgorund color for the heading "features"*/
+    margin: 0; /* To sit heading title h2 to the very top-left of the seccion and align it*/
+    padding: 10px;
+}
+
+aside ul{
+    list-style: none; /* removes the dots */
+    padding-left: 0; /* removes the gap on the left */
+}
+aside li:nth-child(odd){
+    color: #C0C0C0; /* change the colour of the text of odd items*/
+    background-color:#760816; /* add a background colour */
+}
+
+aside li:nth-child(even){
+    color: #C0C0C0; /* chagne the colour of the text of even items*/
+    background-color: #383334; /* add a background colour */
+}
+
+aside li{
+    line-height: 30px; /* So that we have more space above and below the list items. You can also use padding instead! */
+    padding-left: 5px; /* to push the text a little bit away from the left */
+    margin-bottom: 12px; /* list items separed by 12px*/
+    font-weight: bold; /* make text bold */
+}
+
+/* Styles for the footer */
+footer {
+    background: url("../IMAGES/BlackMetalBackground.jpg") repeat-x;
+    background-size: 120px 120px;
+    clear: both; /* clear both flows to sit the footer following and below aside bar and main content*/
+    color: #C0C0C0;
+    padding: 10px;
+    text-align: center;
+}
+
+footer a{
+    color:#6abac8; /* color for the ink in the footer */
+}
+
+/*Responsive layout - makes boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 1160px) { 
+    body {
+        width: 100%;    /*Flexible body*/
+        height: auto;
+    }
+}
+
+@media (max-width: 1080px) {
+        header, nav, aside, main {
+        width: 100%; /* Flexible conten stacked below*/
+        height: auto;
+    }
+    aside{
+        padding: 0; /*to remove original padding right of 12px*/
+    }
+ }
